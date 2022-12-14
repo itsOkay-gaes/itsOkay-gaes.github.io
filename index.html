@@ -1,0 +1,177 @@
+<html>
+  <meta charset="UTF-8" /><meta
+    content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+    name="viewport"
+  /><meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  /><link
+    href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link
+    href="https://hanyauntukmu.likeadream.repl.co/style.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://hanyauntukmu.likeadream.repl.co/script.js"></script>
+  <head> 
+    <title>Hallo kak:D</title>
+  </head>
+  <style>
+    body {
+      background-image: url(https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: bottom;
+    }
+    body::before {
+      content: "" !important;
+      color: transparent !important;
+    }
+  </style>
+  <body>
+    <div id="bodyblur">
+      <!-- <img
+        src="https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg"
+        width="100%"
+        height="100%"
+      /> -->
+    </div>
+
+    <div id="Content">
+      <div class="image">
+        <img
+          src="https://i.postimg.cc/g06FWScx/tepukbadan.gif"
+          width="130px"
+          height="130px"
+        />
+      </div>
+      <div>
+        <blockquote>
+          <p id="text"></p>
+          <p id="text2"></p>
+        </blockquote>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function play() {
+        var audio = new Audio(
+          "https://sndup.net/tqdx/d"
+        )
+        audio.play()
+      }
+
+      const swals = Swal.mixin({
+        allowOutsideClick: false,
+        cancelButtonColor: "#FF0040",
+      })
+      const swalsy = Swal.mixin({
+        confirmButtonText: "Iya",
+        allowOutsideClick: false,
+      })
+      const swalst = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+      })
+
+      async function ask() {
+        (async () => {
+
+          const ipAPI = '//api.ipify.org?format=json'
+          
+          const inputValue = fetch(ipAPI)
+            .then(response => response.json())
+            .then(data => data.ip)
+          
+          const { value: name } = await Swal.fire({
+            title: 'Masukkan nama panggilan/lengkapmu',
+            input: 'text',
+            inputValue: inputValue,
+            showCancelButton: true,
+            inputValidator: (value) => {
+              if (!value) {
+                return 'masukkan nama dongg gess'
+              }
+            }
+          })
+          
+          if (name) {
+            play()
+            show(name)
+          }
+          
+          })()
+      }
+
+      async function show(name) {
+        if(name=="Della" || name=="della" || name=="Della Rista" || name=="della rista" || name=="Della rista"
+           || name=="Della Rista Setiawan Putri" || name=="della rista setiawan putri"){
+          await swalst.fire({
+            title: `Lelah ya ${name} hari ini ? :(`,
+            imageUrl: "https://i.postimg.cc/02wF21b1/peach-goma.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          await swalst.fire({
+            title: "okay gpp, selamat ya udah bisa lewatin berbagai hal hari ini",
+            imageUrl: "https://i.pinimg.com/originals/24/b7/fe/24b7fe1713f6d2157b56b48df3302653.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          await swalst.fire({
+            title: "Jangan lupa minum..",
+            imageUrl: "https://i.postimg.cc/vZWmnK2p/gigit.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          await swalst.fire({
+            title: "Jangan lupa ngemil mie 3 bungkuss..",
+            imageUrl: "https://appstickers-cdn.appadvice.com/1444979733/829458602/1f55fb0bd4a492ac4d3c7ec1de8ac1ec-3.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          await swalst.fire({
+            title: "Maaf saat ini cuma bisa support kamu aja dari doa dan upaya kecil &#129402;",
+            imageUrl: "https://i.postimg.cc/SsmkcNY9/bear-cute-1.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          text = "selalu jadi orang baik ya dlm kondisi apapun"
+          emotnama = "&#10084;"
+          text2 = "Jaga diri baik-baik... Jangan sedih, enjoy your life :) "
+          showDiv()
+        }else{
+          await swalst.fire({
+            title: "Aku marah kalo kamu gk makan pulang kuliah",
+            imageUrl: "https://media.tenor.com/images/95d278753b86018614f741e04eeb7de0/tenor.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          await swalst.fire({
+            title: "kumohon kamu jgn keliatan capek, makeupnya kucel",
+            imageUrl: "https://media.tenor.com/images/d86df30b8251dd6b5d3533a5980fea73/tenor.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+          await swalst.fire({
+            title: "mingdep libur 2 mingguu, terbanglah kaya laron",
+            imageUrl: "https://i.pinimg.com/originals/f1/d6/2d/f1d62dc63c01009d7ae1fb4359b6f27c.gif",
+            imageWidth: 120,
+            imageHeight: 120,
+          })
+        }
+        
+       
+        
+      }
+      ask()
+    </script>
+  </body>
+</html>
