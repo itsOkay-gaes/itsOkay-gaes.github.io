@@ -84,16 +84,9 @@
       async function ask() {
         (async () => {
 
-          const ipAPI = ''
-          
-          const inputValue = fetch(ipAPI)
-            .then(response => response.json())
-            .then(data => data.ip)
-          
           const { value: name } = await Swal.fire({
             title: 'Masukkan nama panggilan/lengkapmu',
             input: 'text',
-            inputValue: inputValue,
             showCancelButton: true,
             inputValidator: (value) => {
               if (!value) {
